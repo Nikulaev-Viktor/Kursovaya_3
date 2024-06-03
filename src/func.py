@@ -11,7 +11,7 @@ def json_encode():
 
 def last_five_operations(data):
     """Сортируем и выводим пять последних операций"""
-    new_operation = [operation for operation in data if "state" in operation and operation["state"] == "EXECUTED"] #объед две функции
+    new_operation = [operation for operation in data if "state" in operation and operation["state"] == "EXECUTED"] 
     sorted_operations = sorted(new_operation, key=lambda x: x["date"], reverse=True)
     return sorted_operations[:4]
     # for operations in data:
